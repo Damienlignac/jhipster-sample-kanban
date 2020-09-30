@@ -1,0 +1,32 @@
+{
+  "name": "Colonne",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "tache",
+      "otherEntityRelationshipName": "colonne",
+      "relationshipName": "tache"
+    }
+  ],
+  "changelogDate": "20200930130645",
+  "javadoc": "The Employee entity.",
+  "entityTableName": "colonne",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

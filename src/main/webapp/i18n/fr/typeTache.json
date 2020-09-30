@@ -1,0 +1,25 @@
+{
+  "kanBanApp": {
+    "typeTache": {
+      "home": {
+        "title": "TypeTaches",
+        "createLabel": "Créer un nouveau Type Tache",
+        "createOrEditLabel": "Créer ou éditer un Type Tache",
+        "notFound": "Aucun Type Tache trouvé"
+      },
+      "created": "Un nouveau Type Tache a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Type Tache avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Type Tache avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Type Tache {{ id }} ?"
+      },
+      "detail": {
+        "title": "Type Tache"
+      },
+      "nom": "Nom",
+      "description": "Description",
+      "couleur": "Couleur",
+      "tache": "Tache"
+    }
+  }
+}
