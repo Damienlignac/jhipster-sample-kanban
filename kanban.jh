@@ -67,7 +67,7 @@ nom String required
 // defining multiple OneToMany relationships with comments
 relationship OneToMany {
 	Client to Projet{client},
-    Projet to Developpeur{projet},
+    
     Ville to Client{ville},
     Colonne to Tache{colonne},
     TypeTache to Tache{typeTache}
