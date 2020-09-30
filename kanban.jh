@@ -1,0 +1,90 @@
+
+entity Ville {
+	nom String required
+    codePostal String
+}
+
+entity Client {
+	nom String required
+    
+    
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Projet {
+	nom String required
+	dtNaissance Date
+    dtLivraison Date
+  
+}
+
+entity TypeTache {
+	nom String required
+    description String
+    couleur String
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Tache {
+	intitule String
+	dtCreation Date
+    nbHeuresEstimees Number
+    nbHeuresReelles Number
+}
+
+/**
+ * The Employee entity.
+ */
+entity Colonne {
+
+	nom String required
+
+}
+
+
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+
+
+entity Developpeur {
+nom String required
+    prenom String
+    dtNaissance Date
+    email String unique
+    nbTachesEnCours Number
+    numeroCarteBleue String
+    
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Client to Projet{client},
+    Projet to Developpeur{projet},
+    Ville to Client{ville},
+    Colonne to Tache{colonne},
+    TypeTache to Tache{typeTache}
+}
+
+relationship ManyToMany {
+	Tache to Developpeur
+    Developpeur to Projet
+}
+
+// Set pagination options
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
