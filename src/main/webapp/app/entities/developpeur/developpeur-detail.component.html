@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="developpeur">
+            <h2><span jhiTranslate="kanBanApp.developpeur.detail.title">Developpeur</span> {{ developpeur.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="kanBanApp.developpeur.nom">Nom</span></dt>
+                <dd>
+                    <span>{{ developpeur.nom }}</span>
+                </dd>
+                <dt><span jhiTranslate="kanBanApp.developpeur.prenom">Prenom</span></dt>
+                <dd>
+                    <span>{{ developpeur.prenom }}</span>
+                </dd>
+                <dt><span jhiTranslate="kanBanApp.developpeur.dtNaissance">Dt Naissance</span></dt>
+                <dd>
+                    <span>{{ developpeur.dtNaissance }}</span>
+                </dd>
+                <dt><span jhiTranslate="kanBanApp.developpeur.email">Email</span></dt>
+                <dd>
+                    <span>{{ developpeur.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="kanBanApp.developpeur.nbTachesEnCours">Nb Taches En Cours</span></dt>
+                <dd>
+                    <span>{{ developpeur.nbTachesEnCours }}</span>
+                </dd>
+                <dt><span jhiTranslate="kanBanApp.developpeur.numeroCarteBleue">Numero Carte Bleue</span></dt>
+                <dd>
+                    <span>{{ developpeur.numeroCarteBleue }}</span>
+                </dd>
+                <dt><span jhiTranslate="kanBanApp.developpeur.projet">Projet</span></dt>
+                <dd>
+                    <span *ngFor="let projet of developpeur.projets; let last = last">
+                        <a [routerLink]="['/projet', projet?.id, 'view']">{{ projet.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="kanBanApp.developpeur.projet">Projet</span></dt>
+                <dd>
+                    <div *ngIf="developpeur.projet">
+                        <a [routerLink]="['/projet', developpeur.projet?.id, 'view']">{{ developpeur.projet?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/developpeur', developpeur.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
