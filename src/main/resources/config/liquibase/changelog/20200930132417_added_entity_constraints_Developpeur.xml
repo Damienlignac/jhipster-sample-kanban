@@ -20,11 +20,5 @@
                                  referencedColumnNames="id"
                                  referencedTableName="projet"/>
         
-        <addForeignKeyConstraint baseColumnNames="projet_id"
-                                 baseTableName="developpeur"
-                                 constraintName="fk_developpeur_projet_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="projet"/>
-
     </changeSet>
 </databaseChangeLog>

@@ -62,14 +62,6 @@
                         <option [ngValue]="getSelected(editForm.get('projets')!.value, projetOption)" *ngFor="let projetOption of projets; trackBy: trackById">{{ projetOption.id }}</option>
                     </select>
                 </div>
-
-                <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="kanBanApp.developpeur.projet" for="field_projet">Projet</label>
-                    <select class="form-control" id="field_projet" name="projet" formControlName="projet">
-                        <option [ngValue]="null"></option>
-                        <option [ngValue]="projetOption.id === editForm.get('projet')!.value?.id ? editForm.get('projet')!.value : projetOption" *ngFor="let projetOption of projets; trackBy: trackById">{{ projetOption.id }}</option>
-                    </select>
-                </div>
             </div>
 
             <div>

@@ -30,7 +30,6 @@
                     <th scope="col" ><span jhiTranslate="kanBanApp.developpeur.nbTachesEnCours">Nb Taches En Cours</span></th>
                     <th scope="col" ><span jhiTranslate="kanBanApp.developpeur.numeroCarteBleue">Numero Carte Bleue</span></th>
                     <th scope="col" ><span jhiTranslate="kanBanApp.developpeur.projet">Projet</span></th>
-                    <th scope="col" ><span jhiTranslate="kanBanApp.developpeur.projet">Projet</span></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -47,11 +46,6 @@
                         <span *ngFor="let projet of developpeur.projets; let last = last">
                             <a class="form-control-static" [routerLink]="['/projet', projet?.id, 'view']">{{ projet.id }}</a>{{ last ? '' : ', ' }}
                         </span>
-                    </td>
-                    <td>
-                        <div *ngIf="developpeur.projet">
-                            <a [routerLink]="['/projet', developpeur.projet?.id, 'view']" >{{ developpeur.projet?.id }}</a>
-                        </div>
                     </td>
                     <td class="text-right">
                         <div class="btn-group">

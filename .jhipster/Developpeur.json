@@ -42,13 +42,6 @@
       "ownerSide": true
     },
     {
-      "relationshipType": "many-to-one",
-      "otherEntityName": "projet",
-      "otherEntityRelationshipName": "developpeur",
-      "relationshipName": "projet",
-      "otherEntityField": "id"
-    },
-    {
       "relationshipType": "many-to-many",
       "otherEntityName": "tache",
       "otherEntityRelationshipName": "developpeur",

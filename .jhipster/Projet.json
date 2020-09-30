@@ -19,12 +19,6 @@
   ],
   "relationships": [
     {
-      "relationshipType": "one-to-many",
-      "otherEntityName": "developpeur",
-      "otherEntityRelationshipName": "projet",
-      "relationshipName": "developpeur"
-    },
-    {
       "relationshipType": "many-to-one",
       "otherEntityName": "client",
       "otherEntityRelationshipName": "projet",

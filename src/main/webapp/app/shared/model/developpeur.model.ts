@@ -11,7 +11,6 @@ export interface IDeveloppeur {
   nbTachesEnCours?: number;
   numeroCarteBleue?: string;
   projets?: IProjet[];
-  projet?: IProjet;
   taches?: ITache[];
 }
 
@@ -25,7 +24,6 @@ export class Developpeur implements IDeveloppeur {
     public nbTachesEnCours?: number,
     public numeroCarteBleue?: string,
     public projets?: IProjet[],
-    public projet?: IProjet,
     public taches?: ITache[]
   ) {}
 }
