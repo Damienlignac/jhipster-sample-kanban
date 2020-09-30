@@ -29,7 +29,6 @@ export class DeveloppeurUpdateComponent implements OnInit {
     nbTachesEnCours: [],
     numeroCarteBleue: [],
     projets: [],
-    projet: [],
   });
 
   constructor(
@@ -62,7 +61,6 @@ export class DeveloppeurUpdateComponent implements OnInit {
       nbTachesEnCours: developpeur.nbTachesEnCours,
       numeroCarteBleue: developpeur.numeroCarteBleue,
       projets: developpeur.projets,
-      projet: developpeur.projet,
     });
   }
 
@@ -93,7 +91,6 @@ export class DeveloppeurUpdateComponent implements OnInit {
       nbTachesEnCours: this.editForm.get(['nbTachesEnCours'])!.value,
       numeroCarteBleue: this.editForm.get(['numeroCarteBleue'])!.value,
       projets: this.editForm.get(['projets'])!.value,
-      projet: this.editForm.get(['projet'])!.value,
     };
   }
 

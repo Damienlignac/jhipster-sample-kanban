@@ -1,7 +1,6 @@
 package fr.sparks.fx.kanban.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -53,10 +52,6 @@ public class Developpeur implements Serializable {
                joinColumns = @JoinColumn(name = "developpeur_id", referencedColumnName = "id"),
                inverseJoinColumns = @JoinColumn(name = "projet_id", referencedColumnName = "id"))
     private Set<Projet> projets = new HashSet<>();
-
-    @ManyToOne
-    @JsonIgnoreProperties(value = "developpeurs", allowSetters = true)
-    private Projet projet;
 
     @ManyToMany(mappedBy = "developpeurs")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -173,19 +168,6 @@ public class Developpeur implements Serializable {
 
     public void setProjets(Set<Projet> projets) {
         this.projets = projets;
-    }
-
-    public Projet getProjet() {
-        return projet;
-    }
-
-    public Developpeur projet(Projet projet) {
-        this.projet = projet;
-        return this;
-    }
-
-    public void setProjet(Projet projet) {
-        this.projet = projet;
     }
 
     public Set<Tache> getTaches() {

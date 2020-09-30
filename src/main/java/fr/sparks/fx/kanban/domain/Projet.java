@@ -39,10 +39,6 @@ public class Projet implements Serializable {
     @Column(name = "dt_livraison")
     private Instant dtLivraison;
 
-    @OneToMany(mappedBy = "projet")
-    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    private Set<Developpeur> developpeurs = new HashSet<>();
-
     @ManyToOne
     @JsonIgnoreProperties(value = "projets", allowSetters = true)
     private Client client;
@@ -98,31 +94,6 @@ public class Projet implements Serializable {
 
     public void setDtLivraison(Instant dtLivraison) {
         this.dtLivraison = dtLivraison;
-    }
-
-    public Set<Developpeur> getDeveloppeurs() {
-        return developpeurs;
-    }
-
-    public Projet developpeurs(Set<Developpeur> developpeurs) {
-        this.developpeurs = developpeurs;
-        return this;
-    }
-
-    public Projet addDeveloppeur(Developpeur developpeur) {
-        this.developpeurs.add(developpeur);
-        developpeur.setProjet(this);
-        return this;
-    }
-
-    public Projet removeDeveloppeur(Developpeur developpeur) {
-        this.developpeurs.remove(developpeur);
-        developpeur.setProjet(null);
-        return this;
-    }
-
-    public void setDeveloppeurs(Set<Developpeur> developpeurs) {
-        this.developpeurs = developpeurs;
     }
 
     public Client getClient() {

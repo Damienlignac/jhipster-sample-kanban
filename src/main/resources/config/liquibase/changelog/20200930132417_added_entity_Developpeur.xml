@@ -34,9 +34,6 @@
             <column name="numero_carte_bleue" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="projet_id" type="bigint">
-                <constraints nullable="true" />
-            </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
         <dropDefaultValue tableName="developpeur" columnName="dt_naissance" columnDataType="datetime"/>

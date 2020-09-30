@@ -38,12 +38,6 @@
                         <a [routerLink]="['/projet', projet?.id, 'view']">{{ projet.id }}</a>{{ last ? '' : ', ' }}
                     </span>
                 </dd>
-                <dt><span jhiTranslate="kanBanApp.developpeur.projet">Projet</span></dt>
-                <dd>
-                    <div *ngIf="developpeur.projet">
-                        <a [routerLink]="['/projet', developpeur.projet?.id, 'view']">{{ developpeur.projet?.id }}</a>
-                    </div>
-                </dd>
             </dl>
 
             <button type="submit"
