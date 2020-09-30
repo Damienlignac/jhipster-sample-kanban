@@ -47,6 +47,21 @@ public class CacheConfiguration {
             createCache(cm, fr.sparks.fx.kanban.domain.User.class.getName());
             createCache(cm, fr.sparks.fx.kanban.domain.Authority.class.getName());
             createCache(cm, fr.sparks.fx.kanban.domain.User.class.getName() + ".authorities");
+            createCache(cm, fr.sparks.fx.kanban.domain.Ville.class.getName());
+            createCache(cm, fr.sparks.fx.kanban.domain.Ville.class.getName() + ".clients");
+            createCache(cm, fr.sparks.fx.kanban.domain.Client.class.getName());
+            createCache(cm, fr.sparks.fx.kanban.domain.Client.class.getName() + ".projets");
+            createCache(cm, fr.sparks.fx.kanban.domain.Projet.class.getName());
+            createCache(cm, fr.sparks.fx.kanban.domain.Projet.class.getName() + ".developpeurs");
+            createCache(cm, fr.sparks.fx.kanban.domain.TypeTache.class.getName());
+            createCache(cm, fr.sparks.fx.kanban.domain.TypeTache.class.getName() + ".taches");
+            createCache(cm, fr.sparks.fx.kanban.domain.Tache.class.getName());
+            createCache(cm, fr.sparks.fx.kanban.domain.Tache.class.getName() + ".developpeurs");
+            createCache(cm, fr.sparks.fx.kanban.domain.Colonne.class.getName());
+            createCache(cm, fr.sparks.fx.kanban.domain.Colonne.class.getName() + ".taches");
+            createCache(cm, fr.sparks.fx.kanban.domain.Developpeur.class.getName());
+            createCache(cm, fr.sparks.fx.kanban.domain.Developpeur.class.getName() + ".projets");
+            createCache(cm, fr.sparks.fx.kanban.domain.Developpeur.class.getName() + ".taches");
             // jhipster-needle-ehcache-add-entry
         };
     }
