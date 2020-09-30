@@ -1,0 +1,30 @@
+{
+  "kanBanApp": {
+    "developpeur": {
+      "home": {
+        "title": "Developpeurs",
+        "createLabel": "Create a new Developpeur",
+        "createOrEditLabel": "Create or edit a Developpeur",
+        "notFound": "No Developpeurs found"
+      },
+      "created": "A new Developpeur is created with identifier {{ param }}",
+      "updated": "A Developpeur is updated with identifier {{ param }}",
+      "deleted": "A Developpeur is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Developpeur {{ id }}?"
+      },
+      "detail": {
+        "title": "Developpeur"
+      },
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "dtNaissance": "Dt Naissance",
+      "email": "Email",
+      "nbTachesEnCours": "Nb Taches En Cours",
+      "numeroCarteBleue": "Numero Carte Bleue",
+      "projet": "Projet",
+      "projet": "Projet",
+      "tache": "Tache"
+    }
+  }
+}

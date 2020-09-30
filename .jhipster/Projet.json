@@ -1,0 +1,55 @@
+{
+  "name": "Projet",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "dtNaissance",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dtLivraison",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "developpeur",
+      "otherEntityRelationshipName": "projet",
+      "relationshipName": "developpeur"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "projet",
+      "relationshipName": "client",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "developpeur",
+      "otherEntityRelationshipName": "projet",
+      "relationshipName": "developpeur",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200930132017",
+  "javadoc": "not an ignored comment",
+  "entityTableName": "projet",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

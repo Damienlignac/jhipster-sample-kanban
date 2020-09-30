@@ -1,0 +1,57 @@
+{
+  "name": "Tache",
+  "fields": [
+    {
+      "fieldName": "intitule",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dtCreation",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "nbHeuresEstimees",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nbHeuresReelles",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "developpeur",
+      "otherEntityRelationshipName": "tache",
+      "relationshipName": "developpeur",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "colonne",
+      "otherEntityRelationshipName": "tache",
+      "relationshipName": "colonne",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "typeTache",
+      "otherEntityRelationshipName": "tache",
+      "relationshipName": "typeTache",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200930132217",
+  "javadoc": "Task entity.\\n@author The JHipster team.",
+  "entityTableName": "tache",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
